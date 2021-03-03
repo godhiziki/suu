@@ -1,0 +1,632 @@
+@charset "UTF-8";
+body {
+  background-color: rgb(177, 149, 126);
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.header-nav {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: #b1957e;
+}
+
+.header-pcnav ul {
+ display: flex;
+ list-style: none;
+  padding: 0;
+  max-width: 770px;
+  margin: 0 auto;
+  justify-content: space-between;
+ padding: 0 10px;
+}
+.header-pcnav li {
+ 
+  min-width: 50px;
+  padding: 10px;
+}
+.header-pcnav a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: rgb(59, 51, 51);
+}
+
+.header-pcnav li:hover {
+  background-color: rgba(112, 92, 75, 0.5);
+}
+
+h1 {
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-weight: normal;
+  font-size: 41px;
+  letter-spacing: 0.15rem;
+}
+
+.header-title {
+  margin: 0 auto;
+  max-width: 790px;
+}
+.header-img {
+  display: inline-block;
+
+  width: 100%;
+}
+@media(max-width:766px){
+  .header-nav{
+    display: none;
+  }
+  .header-title h1{
+    padding: 0;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    background-color:rgb(177, 149, 126) ;
+    height: 50px;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+    z-index: 1;
+  }
+  .header-img{
+    height: 100%;
+  }
+  body{
+    font-size: 13px;
+    
+  }
+  main{
+    /* padding: 0 5px; */
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  h2{
+    font-size: 20px;
+    
+  }
+ 
+}
+
+/* ハンバーガー */
+.humburger {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open .humburger {
+  left: 0;
+  opacity: 1;
+}
+nav .inner {
+  padding: 25px;
+}
+.humburger .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.humburger .inner ul li {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+.humburger .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+.humburger .inner ul li a:hover {
+  background: #e4e4e4;
+}
+@media screen and (max-width: 767px) {
+  .humburger {
+    left: -220px;
+    width: 200px;
+  }
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 5px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 5px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+
+.nav-snsimg {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.nav-snsimg a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+
+@media(min-width:767px){
+  #navArea{
+    display: none;
+  }
+}
+ 
+
+
+/* main導入 */
+
+.introduction h2 {
+  margin: 30px 0;
+  letter-spacing: 0.3rem;
+}
+.introduction p {
+  line-height: 1.7rem;
+  letter-spacing: 0.3rem;
+}
+/* 店内の雰囲気 */
+.flex {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+.flex-img {
+  margin-left: 10px;
+  max-width: 600px;
+  height: 370px;
+  border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
+}
+.flex-item {
+  padding-right: 10px;
+  text-align: justify;
+  margin: 75px 0 0 50px;
+}
+.flex-item li {
+  margin-top: 20px;
+}
+.main-area-text {
+  margin-top: 30px;
+}
+
+.main-area span {
+  margin: 0 10px;
+}
+.main-area p {
+  letter-spacing: 0.1rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .flex {
+    flex-direction: column;
+    max-width: 790px;
+    align-items: center;
+  }
+  .flex-img{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0;
+  }
+  .flex-item{
+    margin: 0 auto;
+    padding: 0;
+  }
+  .flex-item ul{
+    text-align: left;
+    list-style-position: inside;
+  }
+}
+
+/* ギャラリー */
+.gallery-wrap {
+  margin-top: 100px;
+}
+.gallery-wrap h2 {
+  letter-spacing: 0.5rem;
+  margin-bottom: 30px;
+}
+.gallery {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 35px;
+}
+.slider{
+  padding: 0;
+}
+@media(max-width:766px){
+  .gallery-wrap{
+    margin-top: 70px;
+  }
+}
+
+/* 料金 */
+#price {
+  margin-top: 100px;
+}
+.price-flex {
+  display: flex;
+  justify-content: center;
+}
+.price-box {
+  border: 1px solid;
+  padding: 20px 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+.price-flex p {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+@media(max-width:766px){
+  #price{
+    margin-top: 70px;
+  }
+}
+
+
+/* 設備 */
+.setubi h3 {
+  margin-top: 30px;
+}
+.setubi p {
+  margin-top: 20px;
+}
+.setubi-flex {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.setubi-flex span {
+  margin-left: 10px;
+}
+.setubi-right {
+  margin-left: 50px;
+}
+
+@media(max-width:766px){
+  .setubi-flex{
+    flex-direction: column;
+    text-align: center;
+  }
+  .setubi-right{
+    margin: 0;
+  }
+}
+
+/* 予約 */
+.rsvbutton {
+  text-align: center;
+}
+
+.rsvbutton a {
+  background-color: rgba(145, 107, 75, 0.671);
+  /* border: 1px solid; */
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#contact {
+  max-width: 660px;
+  margin: 100px auto 0;
+  text-align: left;
+}
+
+#contact h2,
+#contact h3 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.contact-text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  line-height: 2rem;
+}
+#contact ol {
+  margin: 30px 0;
+}
+
+#contact li {
+  list-style-position: inside;
+  margin-top: 20px;
+}
+
+.contact-box {
+  border: 1px solid;
+  padding: 10px 30px;
+}
+.contact-title {
+  margin-top: 20px;
+}
+.contact-line {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+input[type="text"] {
+  width: 100%;
+  max-width: 240px;
+}
+input[type="tel"] {
+  width: 100%;
+  max-width: 300px;
+}
+input[type="email"] {
+  width: 100%;
+  max-width: 300px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 15rem;
+  margin-top: 10px;
+}
+button[type="submit"] {
+  background-color: #665648;
+  /* border: 1px solid; */
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: rgb(139, 101, 78);
+}
+.must {
+  margin-right: 5px;
+  background-color: #dc655b;
+  border-radius: 5px;
+  color: #fff;
+  padding: 1px;
+  font-size: 15px;
+}
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+@media(max-width:766px){
+  .contact-box img{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+  }
+  #contact{
+    margin-top: 70px;
+  }
+#contact h2{margin-bottom: 30px;}
+#contact h3{
+  margin-top: 30px;
+}
+.contact-text{
+  margin: 30px 0;
+}
+}
+
+
+/* アクセス */
+.access {
+  margin: 0 auto;
+  max-width: 740px;
+}
+.access p {
+  margin-top: 20px;
+}
+.access h2 {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.access-banti {
+  line-height: 2.5rem;
+}
+
+.access h3 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.access ol {
+  text-align: left;
+  margin-top: 30px;
+  list-style-position: inside;
+}
+.access li {
+  margin-top: 20px;
+}
+
+@media(max-width:766px){
+  .access h2{
+    margin-top: 70px;
+  }
+}
+
+/* 注意事項 */
+#room-caution {
+  margin-top: 100px;
+}
+#room-caution p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+#room-caution ul {
+  max-width: 740px;
+  margin: 0 auto;
+  text-align: left;
+}
+#room-caution li {
+  margin-top: 10px;
+}
+.caution-flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.caution-left {
+  margin-right: 90px;
+}
+
+@media(max-width:766px){
+  #room-caution{
+    margin-top: 70px;
+  }
+  .caution-left{
+    margin-right: 50px;
+
+  }
+  #room-caution ul{
+    list-style-position: inside;
+  }
+}
+#room-caution p{
+  font-size: 16px;
+}
+/* footer */
+footer {
+  margin-top: 20px;
+  padding: 15px 0;
+  background-color: #99816d;
+}
+footer h2 {
+  font-family: "Mrs Saint Delafield", cursive;
+}
+.footer {
+  max-width: 740px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.copyright {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.snsimg {
+  width: 100%;
+  text-align: right;
+}
+.snsimg a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+@media(max-width:766px){
+  .snsimg img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  .snsimg a{
+    width: 20px;
+    height: 20px;
+  }
+}
+/* thanks */
+
+/* モバイル版 */
+@media (max-width: 767px) {
+}
