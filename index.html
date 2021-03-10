@@ -54,32 +54,29 @@
         });
       });
 
-      $(function() {
-  var $nav   = $('#navArea');
-  var $btn   = $('.toggle_btn');
-  var $mask  = $('#mask');
-  var open   = 'open'; // class
-  // menu open close
-  $btn.on( 'click', function() {
-    if ( ! $nav.hasClass( open ) ) {
-      $nav.addClass( open );
-    } else {
-      $nav.removeClass( open );
-    }
-  });
-  // mask close
-  $('.inner-ul a[href]').on('click',function(){
-    
-    $($nav).removeClass(open);
-   
-  });
+      $(function () {
+        var $nav = $("#navArea");
+        var $btn = $(".toggle_btn");
+        var $mask = $("#mask");
+        var open = "open"; // class
+        // menu open close
+        $btn.on("click", function () {
+          if (!$nav.hasClass(open)) {
+            $nav.addClass(open);
+          } else {
+            $nav.removeClass(open);
+          }
+        });
+        // mask close
+        $(".inner-ul a[href]").on("click", function () {
+          $($nav).removeClass(open);
+        });
 
-  $mask.on('click', function() {
-    $nav.removeClass( open );
-  });
-} )(jQuery);
+        $mask.on("click", function () {
+          $nav.removeClass(open);
+        });
+      })(jQuery);
     </script>
-    
   </head>
   <body>
     <header>
@@ -97,9 +94,8 @@
       </div>
     </header>
     <!-- ハンバーガー -->
-    
-    <div id="navArea">
 
+    <div id="navArea">
       <nav class="humburger">
         <div class="inner">
           <ul class="inner-ul">
@@ -109,9 +105,8 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#access">Access</a></li>
             <li><a href="#room-caution">Caution</a></li>
-            
+
             <div class="nav-snsimg">
-  
               <a href="https://lin.ee/MB24z8N">
                 <img src="img/LINE_APP.png" width="30px" height="30px" alt="" />
               </a>
@@ -133,32 +128,39 @@
               </a>
             </div>
           </ul>
-
         </div>
       </nav>
 
-    <div class="toggle_btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    
-    
-      <div id="mask"></div>
-    
-    </div>
-    <main>
-      <div class="header-title">
-        <h1>Sharesalon Suu</h1>
-        <img class="header-img" src="img/instasize_210122224653.png" width="770px" height="440px"  alt="" />
+      <div class="toggle_btn">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
+      <div id="mask"></div>
+    </div>
+    <main>
+      <div class="header-title"></div>
+      <div class="header-bg">
+        <img
+          class="header-img"
+          src="img/instasize_210122224653.png"
+          width="770px"
+          height="440px"
+          alt=""
+        />
+        <div class="header-ti">
+          <h1>Sharesalon Suu</h1>
+
+
+  <h2>
+    大切な誰かのための<br />
+    レンタルサロン
+  </h2>
+</div>
+</div>
+
       <section class="introduction" id="main-introduction">
-        <h2>
-          大切な誰かのための<br />
-          レンタルサロン
-        </h2>
         <p>
           大切なお客様をおもてなししたい。<br />
           いつもお世話になってる方に恩返しがしたい。<br />
@@ -172,7 +174,9 @@
             <ul>
               <li>
                 現役のセラピストが作ったお部屋です。<br />
-                足りない備品などはすぐにレンタルできます。
+                <span class="main-sukima">
+                  足りない備品などはすぐにレンタルできます。</span
+                >
               </li>
 
               <li>アロマや照明などもこだわってます。</li>
@@ -240,7 +244,9 @@
       <section class="setubi">
         <h3>&lt;設備・無料備品 &gt;</h3>
         <p>
-          施術用ベッド <span>/</span> 施術用マット<span>/</span>エアコン<span>/</span>照明<span>/</span>湯沸かしポット<span>/</span>大判タオル１枚<br />
+          施術用ベッド
+          <span>/</span>
+          施術用マット<span>/</span>エアコン<span>/</span>照明<span>/</span>湯沸かしポット<span>/</span>大判タオル１枚<br />
           顔まくら<span>/</span>ブランケット<span>/</span>クッション<span>/</span>マグカップ<span>/</span>スプーン
         </p>
         <h3>&lt;有料備品&gt;</h3>
@@ -432,14 +438,11 @@
 
     <footer>
       <div class="footer">
-
         <div class="copyright">
           <h2>Sharesalon suu</h2>
           <small>&copy;2021 Sharesalon suu All right reserved</small>
-          
         </div>
         <div class="snsimg">
-  
           <a href="https://lin.ee/MB24z8N">
             <img src="img/LINE_APP.png" width="30px" height="30px" alt="" />
           </a>
