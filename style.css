@@ -255,7 +255,7 @@ nav .inner {
   margin: 50px auto 0;
 }
 .flex-img {
-  margin-left: 10px;
+  margin-left: 40px;
   max-width: 600px;
   height: 370px;
   border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
@@ -263,16 +263,17 @@ nav .inner {
 .flex-item {
   padding-right: 10px;
   text-align: justify;
-  margin: 75px 0 0 50px;
+  margin: 30px 0 0 80px;
 }
 .flex-item li {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .main-area-text {
   margin-top: 30px;
 }
 
-.main-area span {
+.main-area span,
+.setubi span {
   margin: 0 10px;
 }
 .main-area p {
