@@ -32,13 +32,14 @@ body {
 .header-pcnav li {
  
   min-width: 50px;
-  padding: 10px;
+ 
 }
 .header-pcnav a {
   display: block;
   width: 100%;
   text-decoration: none;
   color: rgb(59, 51, 51);
+  padding: 10px;
 }
 
 .header-pcnav li:hover {
@@ -280,11 +281,13 @@ nav .inner {
   margin: 30px 0;
   letter-spacing: 0.3rem;
 }
-.introduction p {
-  line-height: 1.7rem;
+.introduction h3 {
+  line-height: 2rem;
   letter-spacing: 0.3rem;
   margin-top: 20px;
+  font-weight: normal;
 }
+
 /* 店内の雰囲気 */
 .flex {
   display: flex;
@@ -300,13 +303,13 @@ nav .inner {
 .flex-item {
   padding-right: 10px;
   text-align: justify;
-  margin: 30px 0 0 80px;
+  margin: 20px 0 0 80px;
 }
 .flex-item li {
   margin-top: 40px;
 }
 .main-area-text {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .main-area .main-sukima{
   margin: 0;
@@ -342,7 +345,8 @@ nav .inner {
   }
 }
 @media(max-width:766px){
-  .main-area .main-sukima{
+  
+ .main-area .main-sukima,#room-caution .main-sukima{
     margin-left: 20px;
   }
   
@@ -376,17 +380,19 @@ nav .inner {
 }
 .price-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .price-box {
   border: 1px solid;
-  padding: 20px 20px;
+  padding: 10px 40px;
   max-width: 400px;
   margin: 20px auto;
 }
 .price-flex p {
   margin-right: 10px;
-  margin-top: 5px;
+  
+  font-weight: bold;
+  font-size: 1.17em;
 }
 
 @media(max-width:766px){
@@ -476,6 +482,7 @@ nav .inner {
 }
 .contact-title {
   margin-top: 20px;
+  font-weight: bold;
 }
 .contact-line {
   margin-bottom: 20px;
@@ -634,11 +641,12 @@ label {
 /* footer */
 footer {
   margin-top: 20px;
-  padding: 15px 0;
-  background-color: #99816d;
+  padding: 20px 0;
+  background-color: rgba(145, 107, 75, 0.671);
 }
 footer h2 {
   font-family: "Mrs Saint Delafield", cursive;
+  margin-top: 5px;
 }
 .footer {
   max-width: 740px;
@@ -680,3 +688,4 @@ footer h2 {
 /* モバイル版 */
 @media (max-width: 767px) {
 }
+

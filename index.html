@@ -77,6 +77,18 @@
         });
       })(jQuery);
     </script>
+   <script>
+    $(function() {
+      var headerHeight = 43;//固定ヘッダーの高さを入れる
+      $('[href^="#"]').click(function(){
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHeight; 
+        $("html, body").animate({scrollTop:position}, 200, "swing");//200はスクロールの移動スピードです
+        return false;
+      });
+    });
+  </script>
   </head>
   <body>
     <header>
@@ -139,6 +151,7 @@
 
       <div id="mask"></div>
     </div>
+
     <main>
       <div class="header-title"></div>
       <div class="header-bg">
@@ -152,20 +165,26 @@
         <div class="header-ti">
           <h1>Sharesalon Suu</h1>
 
-
-  <h2>
-    大切な誰かのための<br />
-    レンタルサロン
-  </h2>
-</div>
-</div>
+          <h2>
+            大切な誰かのための<br />
+            シェアサロン
+          </h2>
+        </div>
+      </div>
 
       <section class="introduction" id="main-introduction">
-        <p>
+        <h3>
           大切なお客様をおもてなししたい。<br />
-          いつもお世話になってる方に恩返しがしたい。<br />
-          そんな気持ちが詰まったシェアスペースです。<br />
-        </p>
+          
+
+            いつもお世話になってる方に恩返しがしたい。
+            <br />
+      
+          
+
+            そんな気持ちが詰まったスペースです。
+        
+        </h3>
       </section>
       <section class="main-area">
         <div class="flex">
@@ -173,13 +192,19 @@
           <div class="flex-item">
             <ul>
               <li>
-                現役のセラピストが作ったお部屋です。<br />
+                現役のセラピストが作ったサロンです。<br />
                 <span class="main-sukima">
                   足りない備品などはすぐにレンタルできます。</span
                 >
               </li>
 
-              <li>アロマや照明などもこだわってます。</li>
+              <li>
+                サロン内のよもぎ蒸しやハーブテントもレンタルできます。
+                <br />
+                <span class="main-sukima">
+                  *初回はご説明を兼ねて一度施術を受けていただきます。
+                </span>
+              </li>
               <li>駅が近くてアクセスしやすい立地。</li>
               <li>
                 ベッドもマットもありますので、幅広い施術内容にも対応できます。
@@ -230,14 +255,8 @@
         <h2>料金システム</h2>
         <div class="price-box">
           <div class="price-flex">
-            <p>平日</p>
             <p>10:00~24:00</p>
-            <p>1000円/1h</p>
-          </div>
-          <div class="price-flex">
-            <p>土日祝</p>
-            <p>10:00~24:00</p>
-            <p>1100円/1h</p>
+            <p>￥900/1h</p>
           </div>
         </div>
       </section>
@@ -246,8 +265,10 @@
         <p>
           施術用ベッド
           <span>/</span>
-          施術用マット<span>/</span>エアコン<span>/</span>照明<span>/</span>湯沸かしポット<span>/</span>大判タオル１枚<br />
-          顔まくら<span>/</span>ブランケット<span>/</span>クッション<span>/</span>マグカップ<span>/</span>スプーン
+          施術用マット<span>/</span>エアコン<span>/</span>照明<span>/</span>湯沸かしポット<span>/</span>大判タオル１枚<span
+            >/</span
+          ><br />
+          顔まくら<span>/</span>ブランケット<span>/</span>クッション<span>/</span>マグカップ<span>/</span>スプーン<span>/</span>アロマポット(コンセント式)
         </p>
         <h3>&lt;有料備品&gt;</h3>
         <div class="setubi-flex">
@@ -255,7 +276,7 @@
             <p>大判タオル（２枚目以降）<span>150円</span></p>
             <p>バスタオル<span>100円</span></p>
             <p>フェイスタオル <span>50円</span></p>
-            <p>アロマディフューザー<span> 200円</span></p>
+
             <p>エステガウン<span>100円</span></p>
           </div>
 
@@ -263,7 +284,7 @@
             <p>シーツタオル<span>200円</span></p>
             <p>ペーパーショーツ<span>50円</span></p>
             <p>使い捨て防水ベットシーツ<span>100円</span></p>
-            <p>黄土よもぎ蒸しセット<span>1,000円</span></p>
+            <p>黄土よもぎ蒸しセット<span>1500円</span></p>
           </div>
         </div>
       </section>
@@ -346,15 +367,13 @@
           <label for="form-detail"
             ><span class="must">必須</span>お問い合わせ・ご予約</label
           >
-          <p>
-            ご予約希望日時を３つお書きください <br />
-            ご不明な点があれば、お気軽にご連絡くださいませ（最大1,000文字）。
-          </p>
+
           <p>
             <textarea
               id="form-detail"
               name="entry.710000480"
-              placeholder="ご自由にご記載下さい。"
+              placeholder="ご不明な点などございましたら、お気軽にお問い合わせ下さいませ。
+              *即日のご予約をご希望の場合はLINEにてお願いいたします。"
               required=""
             ></textarea>
           </p>
@@ -378,30 +397,14 @@
       <section class="access" id="access">
         <h2>アクセス</h2>
         <p class="access-banti">
-          大阪府大阪市北区浪花町7-11 <br />
-          （住所と入退室方法の詳細は、予約確定後にマイページで確認できます）
+          大阪府大阪市北区浪花町<br />
+          （住所と入退室方法の詳細は、予約確定後にメールまたはショートメールにてお送りいたします。）
         </p>
         <h3>&lt;交通手段&gt;</h3>
-        <p>阪急千里線 天神橋筋六丁目駅 徒歩3分</p>
-        <p>大阪環状線 天満駅 徒歩7分</p>
-        <p>大阪市営地下鉄谷町線 中崎町駅 徒歩5分</p>
-        <p>大阪市営地下鉄堺筋線 扇町駅 徒歩6分</p>
-
-        <h3>&lt;道案内&gt;</h3>
-        <ol>
-          <li>
-            天神橋筋六丁目駅⑬番出口から出ていただき、道路を左手に置いて真っ直ぐ進みます。
-          </li>
-          <li>
-            右手に「餃子の勝」さんが見えてきますので、その隣の路地に入ってください。
-          </li>
-          <li>
-            そのまま進むと右手に「喫茶路地」さんがあり、十字路がございますので少し越えます。
-          </li>
-          <li>
-            越えて左手、手前から２軒目が当店です。小さいですが、看板を出しておりますので目印にいらしてください。
-          </li>
-        </ol>
+        <p>阪急千里線 天神橋筋六丁目駅 徒歩約5分</p>
+        <p>大阪環状線 天満駅 徒歩約3分</p>
+        <p>大阪市営地下鉄谷町線 中崎町駅 徒歩約5分</p>
+        <p>大阪市営地下鉄堺筋線 扇町駅 徒歩約3分</p>
       </section>
       <section id="room-caution">
         <h2>禁止事項・注意事項</h2>
@@ -414,10 +417,13 @@
           <p>騒音・大きな音</p>
         </div>
         <ul>
-          <li>店舗として使用しておりますので、スタッフが常在しております。</li>
           <li>
-            使用後はスタッフが清掃をいたしますが、使用したものはまとめて1箇所に置いておいてください。
+            入退室のお時間は厳守でお願いいたします。<br />
+            <span class="main-sukima">
+              時間外の滞在を確認しましたら、延長料金を請求いたします。
+            </span>
           </li>
+
           <li>室内は完全禁煙でございます。</li>
           <li>
             室内にてレイアウトを変更された場合には、退室されるまでに必ず元にお戻し下さい。
@@ -431,6 +437,9 @@
           </li>
           <li>
             貸し出した備品の破損を発見した場合、備品代の料金をお支払い頂きます
+          </li>
+          <li>
+            入室をして備品の破損や汚れ、盗難を発見されましたら、すみやかにご連絡ください。
           </li>
         </ul>
       </section>
